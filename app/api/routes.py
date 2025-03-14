@@ -11,6 +11,7 @@ from app.services.trust import TrustScoreCalculator
 from app.services.tee import TEEAttestationGenerator, OnChainVerifier
 from app.services.ftso import FTSODataCollector
 from app.core.db import mongodb, redis, qdrant_client
+from app.services.ftso_testnet import ftso_testnet_collector, FEED_IDS
 
 router = APIRouter()
 
@@ -188,4 +189,136 @@ async def get_ftso_symbols():
         }
     except Exception as e:
         logger.error(f"Error getting FTSO symbols: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/ftso/testnet/data")
+async def get_ftso_testnet_data(symbol: Optional[str] = None):
+    """Get FTSO data from Coston 2 testnet"""
+    try:
+        if symbol:
+            # Get data for a specific symbol
+            if symbol in FEED_IDS:
+                feed_id = FEED_IDS[symbol]
+                feed_data = await ftso_testnet_collector.get_feed_data(feed_id)
+                
+                if feed_data:
+                    return {
+                        "symbol": symbol,
+                        "data": feed_data,
+                        "timestamp": int(time.time())
+                    }
+                else:
+                    raise HTTPException(status_code=404, detail=f"Data for symbol {symbol} not found")
+            else:
+                raise HTTPException(status_code=404, detail=f"Symbol {symbol} not supported")
+        
+        # Get data for all symbols
+        all_feeds = await ftso_testnet_collector.collect_all_feeds()
+        
+        return {
+            "data": all_feeds,
+            "count": len(all_feeds),
+            "timestamp": int(time.time())
+        }
+    except Exception as e:
+        logger.error(f"Error getting FTSO testnet data: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/ftso/testnet/data/{symbol}")
+async def get_ftso_testnet_data_by_symbol(symbol: str):
+    """Get FTSO data for a specific symbol from Coston 2 testnet"""
+    try:
+        # URL encoding might change the format, so normalize it
+        # If the symbol doesn't contain a slash, try to find a matching symbol
+        if '/' not in symbol:
+            for known_symbol in FEED_IDS.keys():
+                if symbol in known_symbol.split('/')[0]:
+                    symbol = known_symbol
+                    break
+        
+        logger.info(f"Getting data for symbol: {symbol}")
+        
+        if symbol in FEED_IDS:
+            feed_id = FEED_IDS[symbol]
+            feed_data = await ftso_testnet_collector.get_feed_data(feed_id)
+            
+            if feed_data:
+                return {
+                    "symbol": symbol,
+                    "data": feed_data,
+                    "timestamp": int(time.time())
+                }
+            else:
+                raise HTTPException(status_code=404, detail=f"Data for symbol {symbol} not found")
+        else:
+            # Try to get from all feeds
+            all_feeds = await ftso_testnet_collector.collect_all_feeds()
+            for feed_symbol, feed_data in all_feeds.items():
+                if symbol in feed_symbol:
+                    return {
+                        "symbol": feed_symbol,
+                        "data": feed_data,
+                        "timestamp": int(time.time())
+                    }
+            
+            raise HTTPException(status_code=404, detail=f"Symbol {symbol} not supported")
+    except Exception as e:
+        logger.error(f"Error getting FTSO testnet data for symbol {symbol}: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/ftso/testnet/symbols")
+async def get_ftso_testnet_symbols():
+    """Get supported FTSO symbols from Coston 2 testnet"""
+    try:
+        # First try to get from the contract
+        symbols = await ftso_testnet_collector.get_supported_symbols()
+        
+        # If that fails, use our predefined list
+        if not symbols:
+            symbols = list(ftso_testnet_collector.FEED_IDS.keys())
+        
+        return {
+            "symbols": symbols,
+            "count": len(symbols),
+            "timestamp": int(time.time())
+        }
+    except Exception as e:
+        logger.error(f"Error getting FTSO testnet symbols: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/ftso/testnet/price/{symbol}")
+async def get_ftso_testnet_price(symbol: str):
+    """Get current price for a symbol from Coston 2 testnet"""
+    try:
+        # URL encoding might change the format, so normalize it
+        # If the symbol doesn't contain a slash, try to find a matching symbol
+        if '/' not in symbol:
+            for known_symbol in FEED_IDS.keys():
+                if symbol in known_symbol.split('/')[0]:
+                    symbol = known_symbol
+                    break
+        
+        logger.info(f"Getting price for symbol: {symbol}")
+        price = await ftso_testnet_collector.get_price(symbol)
+        
+        if price is not None:
+            return {
+                "symbol": symbol,
+                "price": price,
+                "timestamp": int(time.time())
+            }
+        else:
+            # Try to get from all feeds
+            all_feeds = await ftso_testnet_collector.collect_all_feeds()
+            for feed_symbol, feed_data in all_feeds.items():
+                if symbol in feed_symbol:
+                    return {
+                        "symbol": feed_symbol,
+                        "price": feed_data["value"],
+                        "timestamp": int(time.time())
+                    }
+            
+            raise HTTPException(status_code=404, detail=f"Price for symbol {symbol} not found")
+    except Exception as e:
+        logger.error(f"Error getting FTSO testnet price: {e}")
         raise HTTPException(status_code=500, detail=str(e))

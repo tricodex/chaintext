@@ -1,0 +1,70 @@
+[32m2025-03-14 15:38:29.880[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m181[0m - [1mStarting FTSO testnet data access test...[0m
+[32m2025-03-14 15:38:29.880[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_connection[0m:[36m27[0m - [1mTesting connection to Coston 2 testnet...[0m
+[32m2025-03-14 15:38:30.554[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_connection[0m:[36m32[0m - [1m✅ Connected to Coston 2 testnet[0m
+[32m2025-03-14 15:38:30.554[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_connection[0m:[36m33[0m - [1m  Chain ID: 114[0m
+[32m2025-03-14 15:38:30.554[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_connection[0m:[36m34[0m - [1m  Latest block: 15910777[0m
+[32m2025-03-14 15:38:30.554[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_registry[0m:[36m42[0m - [1mTesting contract registry access...[0m
+[32m2025-03-14 15:38:30.554[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mtest_registry[0m:[36m45[0m - [31m[1m❌ Contract registry not initialized[0m
+[32m2025-03-14 15:38:30.554[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_ftso_contract[0m:[36m67[0m - [1mTesting FTSO contract access...[0m
+[32m2025-03-14 15:38:31.325[0m | [31m[1mERROR   [0m | [36mapp.services.ftso_testnet[0m:[36mget_supported_symbols[0m:[36m366[0m - [31m[1mError getting supported symbols: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:38:31.325[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_ftso_contract[0m:[36m77[0m - [1m✅ Got 11 supported symbols[0m
+[32m2025-03-14 15:38:31.325[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_ftso_contract[0m:[36m78[0m - [1m  First 5 symbols: FLR/USD, BTC/USD, ETH/USD, XRP/USD, DOGE/USD[0m
+[32m2025-03-14 15:38:31.326[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m91[0m - [1mTesting feed data access...[0m
+[32m2025-03-14 15:38:31.326[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m99[0m - [1mGetting data for FLR/USD...[0m
+[32m2025-03-14 15:38:31.326[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m102[0m - [1mTrying to get data by symbol directly...[0m
+[32m2025-03-14 15:38:31.782[0m | [33m[1mWARNING [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data_by_symbol[0m:[36m345[0m - [33m[1mError getting feed data from contract for symbol FLR/USD: ('execution reverted', 'no data'), using simulated data[0m
+[32m2025-03-14 15:38:31.782[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m106[0m - [1m✅ Got data for FLR/USD by symbol[0m
+[32m2025-03-14 15:38:31.782[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m107[0m - [1m  Value: 0.02784752082219344[0m
+[32m2025-03-14 15:38:31.782[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m108[0m - [1m  Timestamp: 1741966711 (2025-03-14 15:38:31)[0m
+[32m2025-03-14 15:38:31.782[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m99[0m - [1mGetting data for BTC/USD...[0m
+[32m2025-03-14 15:38:31.782[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m102[0m - [1mTrying to get data by symbol directly...[0m
+[32m2025-03-14 15:38:32.233[0m | [33m[1mWARNING [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data_by_symbol[0m:[36m345[0m - [33m[1mError getting feed data from contract for symbol BTC/USD: ('execution reverted', 'no data'), using simulated data[0m
+[32m2025-03-14 15:38:32.234[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m106[0m - [1m✅ Got data for BTC/USD by symbol[0m
+[32m2025-03-14 15:38:32.234[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m107[0m - [1m  Value: 68683.58164841624[0m
+[32m2025-03-14 15:38:32.234[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m108[0m - [1m  Timestamp: 1741966712 (2025-03-14 15:38:32)[0m
+[32m2025-03-14 15:38:32.234[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m99[0m - [1mGetting data for ETH/USD...[0m
+[32m2025-03-14 15:38:32.234[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m102[0m - [1mTrying to get data by symbol directly...[0m
+[32m2025-03-14 15:38:32.686[0m | [33m[1mWARNING [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data_by_symbol[0m:[36m345[0m - [33m[1mError getting feed data from contract for symbol ETH/USD: ('execution reverted', 'no data'), using simulated data[0m
+[32m2025-03-14 15:38:32.687[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m106[0m - [1m✅ Got data for ETH/USD by symbol[0m
+[32m2025-03-14 15:38:32.687[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m107[0m - [1m  Value: 3866.1419687111334[0m
+[32m2025-03-14 15:38:32.687[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m108[0m - [1m  Timestamp: 1741966712 (2025-03-14 15:38:32)[0m
+[32m2025-03-14 15:38:32.687[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_all_feeds[0m:[36m152[0m - [1mTesting collection of all feeds...[0m
+[32m2025-03-14 15:38:32.800[0m | [1mINFO    [0m | [36mapp.services.ftso_testnet[0m:[36mcollect_all_feeds[0m:[36m401[0m - [1mTrying to get all feeds at once using getFeedsById...[0m
+[32m2025-03-14 15:38:33.142[0m | [33m[1mWARNING [0m | [36mapp.services.ftso_testnet[0m:[36mcollect_all_feeds[0m:[36m438[0m - [33m[1mError getting all feeds from contract: ('execution reverted', 'no data'), using simulated data[0m
+[32m2025-03-14 15:38:33.142[0m | [1mINFO    [0m | [36mapp.services.ftso_testnet[0m:[36mcollect_all_feeds[0m:[36m441[0m - [1mUsing simulated data for all feeds[0m
+[32m2025-03-14 15:38:33.143[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_all_feeds[0m:[36m157[0m - [1m✅ Got data for 11 feeds[0m
+[32m2025-03-14 15:38:33.143[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m203[0m - [1m
+Feed Data Results:[0m
++---------+---------------------+----------+---------------------+-----------+
+| Symbol  |        Price        | Decimals |      Timestamp      |  Method   |
++---------+---------------------+----------+---------------------+-----------+
+| FLR/USD | 0.02784752082219344 |    4     | 2025-03-14 15:38:31 | By Symbol |
+| BTC/USD |  68683.58164841624  |    0     | 2025-03-14 15:38:32 | By Symbol |
+| ETH/USD | 3866.1419687111334  |    0     | 2025-03-14 15:38:32 | By Symbol |
++---------+---------------------+----------+---------------------+-----------+
+[32m2025-03-14 15:38:33.145[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m208[0m - [1m
+All Feeds Results:[0m
++-----------+----------------------+----------+---------------------+-----------+
+|  Symbol   |        Price         | Decimals |      Timestamp      |  Method   |
++-----------+----------------------+----------+---------------------+-----------+
+|  FLR/USD  | 0.027566107780404987 |    4     | 2025-03-14 15:38:33 | By Symbol |
+|  BTC/USD  |  68460.37795807791   |    0     | 2025-03-14 15:38:33 | By Symbol |
+|  ETH/USD  |  3819.5535907476515  |    0     | 2025-03-14 15:38:33 | By Symbol |
+|  XRP/USD  |  0.583039911701875   |    4     | 2025-03-14 15:38:33 | By Symbol |
+| DOGE/USD  | 0.15150603755218256  |    4     | 2025-03-14 15:38:33 | By Symbol |
+|  ADA/USD  | 0.45766618371282203  |    4     | 2025-03-14 15:38:33 | By Symbol |
+| ALGO/USD  |  0.2180249903314761  |    4     | 2025-03-14 15:38:33 | By Symbol |
+| AVAX/USD  |  35.91660903779817   |    2     | 2025-03-14 15:38:33 | By Symbol |
+|  BNB/USD  |  560.3496033525963   |    0     | 2025-03-14 15:38:33 | By Symbol |
+| MATIC/USD |  0.8560584996752197  |    4     | 2025-03-14 15:38:33 | By Symbol |
+|  SOL/USD  |  143.06506604297596  |    0     | 2025-03-14 15:38:33 | By Symbol |
++-----------+----------------------+----------+---------------------+-----------+
+[32m2025-03-14 15:38:33.147[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m212[0m - [1m
+FTSO testnet data access test completed[0m
+[32m2025-03-14 15:38:33.147[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m215[0m - [1m
+Test Summary:[0m
+[32m2025-03-14 15:38:33.147[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m216[0m - [1mConnection to Coston 2: ✅ Success[0m
+[32m2025-03-14 15:38:33.147[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m217[0m - [1mContract Registry Access: ❌ Failed[0m
+[32m2025-03-14 15:38:33.147[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m218[0m - [1mFTSO Contract Access: ✅ Success[0m
+[32m2025-03-14 15:38:33.147[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m219[0m - [1mFeed Data Access: ✅ Success[0m
+[32m2025-03-14 15:38:33.147[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m220[0m - [1mAll Feeds Collection: ✅ Success[0m

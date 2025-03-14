@@ -1,0 +1,43 @@
+[32m2025-03-14 15:30:52.882[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m153[0m - [1mStarting FTSO testnet data access test...[0m
+[32m2025-03-14 15:30:52.882[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_connection[0m:[36m27[0m - [1mTesting connection to Coston 2 testnet...[0m
+[32m2025-03-14 15:30:53.219[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_connection[0m:[36m32[0m - [1m✅ Connected to Coston 2 testnet[0m
+[32m2025-03-14 15:30:53.219[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_connection[0m:[36m33[0m - [1m  Chain ID: 114[0m
+[32m2025-03-14 15:30:53.219[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_connection[0m:[36m34[0m - [1m  Latest block: 15910590[0m
+[32m2025-03-14 15:30:53.219[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_registry[0m:[36m42[0m - [1mTesting contract registry access...[0m
+[32m2025-03-14 15:30:53.561[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mtest_registry[0m:[36m62[0m - [31m[1m❌ Error accessing contract registry: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:30:53.561[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_ftso_contract[0m:[36m67[0m - [1mTesting FTSO contract access...[0m
+[32m2025-03-14 15:30:54.353[0m | [31m[1mERROR   [0m | [36mapp.services.ftso_testnet[0m:[36mget_supported_symbols[0m:[36m195[0m - [31m[1mError getting supported symbols: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:30:54.353[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_ftso_contract[0m:[36m77[0m - [1m✅ Got 11 supported symbols[0m
+[32m2025-03-14 15:30:54.353[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_ftso_contract[0m:[36m78[0m - [1m  First 5 symbols: FLR/USD, BTC/USD, ETH/USD, XRP/USD, DOGE/USD[0m
+[32m2025-03-14 15:30:54.353[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m91[0m - [1mTesting feed data access...[0m
+[32m2025-03-14 15:30:54.353[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m101[0m - [1mGetting data for FLR/USD (Feed ID: 0x01464c522f55534400000000000000000000000000)...[0m
+[32m2025-03-14 15:30:54.811[0m | [31m[1mERROR   [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data[0m:[36m177[0m - [31m[1mError getting feed data for 0x01464c522f55534400000000000000000000000000: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:30:54.811[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m116[0m - [31m[1m❌ Failed to get data for FLR/USD[0m
+[32m2025-03-14 15:30:54.811[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m101[0m - [1mGetting data for BTC/USD (Feed ID: 0x0142544300000000000000000000000000000000)...[0m
+[32m2025-03-14 15:30:55.279[0m | [31m[1mERROR   [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data[0m:[36m177[0m - [31m[1mError getting feed data for 0x0142544300000000000000000000000000000000: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:30:55.279[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m116[0m - [31m[1m❌ Failed to get data for BTC/USD[0m
+[32m2025-03-14 15:30:55.279[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m101[0m - [1mGetting data for ETH/USD (Feed ID: 0x0145544800000000000000000000000000000000)...[0m
+[32m2025-03-14 15:30:55.730[0m | [31m[1mERROR   [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data[0m:[36m177[0m - [31m[1mError getting feed data for 0x0145544800000000000000000000000000000000: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:30:55.730[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mtest_feed_data[0m:[36m116[0m - [31m[1m❌ Failed to get data for ETH/USD[0m
+[32m2025-03-14 15:30:55.730[0m | [1mINFO    [0m | [36m__main__[0m:[36mtest_all_feeds[0m:[36m126[0m - [1mTesting collection of all feeds...[0m
+[32m2025-03-14 15:30:56.185[0m | [31m[1mERROR   [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data[0m:[36m177[0m - [31m[1mError getting feed data for 0x01464c522f55534400000000000000000000000000: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:30:56.640[0m | [31m[1mERROR   [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data[0m:[36m177[0m - [31m[1mError getting feed data for 0x0142544300000000000000000000000000000000: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:30:57.096[0m | [31m[1mERROR   [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data[0m:[36m177[0m - [31m[1mError getting feed data for 0x0145544800000000000000000000000000000000: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:30:57.546[0m | [31m[1mERROR   [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data[0m:[36m177[0m - [31m[1mError getting feed data for 0x0158525000000000000000000000000000000000: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:30:58.003[0m | [31m[1mERROR   [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data[0m:[36m177[0m - [31m[1mError getting feed data for 0x01444f474500000000000000000000000000000000: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:30:58.464[0m | [31m[1mERROR   [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data[0m:[36m177[0m - [31m[1mError getting feed data for 0x0141444100000000000000000000000000000000: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:30:58.924[0m | [31m[1mERROR   [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data[0m:[36m177[0m - [31m[1mError getting feed data for 0x01414c474f00000000000000000000000000000000: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:30:59.382[0m | [31m[1mERROR   [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data[0m:[36m177[0m - [31m[1mError getting feed data for 0x0141564158000000000000000000000000000000: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:30:59.833[0m | [31m[1mERROR   [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data[0m:[36m177[0m - [31m[1mError getting feed data for 0x01424e4200000000000000000000000000000000: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:31:00.297[0m | [31m[1mERROR   [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data[0m:[36m177[0m - [31m[1mError getting feed data for 0x014d41544943000000000000000000000000000000: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:31:00.754[0m | [31m[1mERROR   [0m | [36mapp.services.ftso_testnet[0m:[36mget_feed_data[0m:[36m177[0m - [31m[1mError getting feed data for 0x01534f4c00000000000000000000000000000000: ('execution reverted', 'no data')[0m
+[32m2025-03-14 15:31:00.754[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mtest_all_feeds[0m:[36m145[0m - [31m[1m❌ Failed to get any feed data[0m
+[32m2025-03-14 15:31:00.754[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m184[0m - [1m
+FTSO testnet data access test completed[0m
+[32m2025-03-14 15:31:00.754[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m187[0m - [1m
+Test Summary:[0m
+[32m2025-03-14 15:31:00.754[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m188[0m - [1mConnection to Coston 2: ✅ Success[0m
+[32m2025-03-14 15:31:00.754[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m189[0m - [1mContract Registry Access: ❌ Failed[0m
+[32m2025-03-14 15:31:00.754[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m190[0m - [1mFTSO Contract Access: ✅ Success[0m
+[32m2025-03-14 15:31:00.754[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m191[0m - [1mFeed Data Access: ❌ Failed[0m
+[32m2025-03-14 15:31:00.754[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m192[0m - [1mAll Feeds Collection: ❌ Failed[0m
