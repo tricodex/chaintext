@@ -1,0 +1,8 @@
+---
+description: Image
+globs: 
+alwaysApply: true
+---
+we must be Using the exact image that matches the contract's expected digest
+    image: a490f5528c87   # This is the image that matches the contract's expected digest
+    # Commenting out the build section since we're using a pre-built image

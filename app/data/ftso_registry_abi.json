@@ -1,0 +1,70 @@
+[
+  {
+    "inputs": [{"internalType": "uint256", "name": "_symbolIndex", "type": "uint256"}],
+    "name": "getCurrentPrice",
+    "outputs": [
+      {"internalType": "uint256", "name": "_price", "type": "uint256"},
+      {"internalType": "uint256", "name": "_timestamp", "type": "uint256"},
+      {"internalType": "uint256", "name": "_decimals", "type": "uint256"}
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getSupportedSymbols",
+    "outputs": [{"internalType": "string[]", "name": "", "type": "string[]"}],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getSupportedSymbolsCount",
+    "outputs": [{"internalType": "uint256", "name": "", "type": "uint256"}],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{"internalType": "uint256", "name": "_symbolIndex", "type": "uint256"}],
+    "name": "getSupportedSymbol",
+    "outputs": [{"internalType": "string", "name": "", "type": "string"}],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{"internalType": "string", "name": "_symbol", "type": "string"}],
+    "name": "getSupportedSymbolIndex",
+    "outputs": [{"internalType": "uint256", "name": "", "type": "uint256"}],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{"internalType": "uint256", "name": "_symbolIndex", "type": "uint256"}],
+    "name": "getAnchorPrice",
+    "outputs": [
+      {"internalType": "uint256", "name": "_price", "type": "uint256"},
+      {"internalType": "uint256", "name": "_timestamp", "type": "uint256"},
+      {"internalType": "uint256", "name": "_decimals", "type": "uint256"}
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{"internalType": "string", "name": "_symbol", "type": "string"}],
+    "name": "getPrice",
+    "outputs": [{"internalType": "uint256", "name": "_price", "type": "uint256"}],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{"internalType": "string", "name": "_symbol", "type": "string"}],
+    "name": "getPriceWithDecimals",
+    "outputs": [
+      {"internalType": "uint256", "name": "_price", "type": "uint256"},
+      {"internalType": "uint256", "name": "_timestamp", "type": "uint256"},
+      {"internalType": "uint256", "name": "_decimals", "type": "uint256"}
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

@@ -1,0 +1,139 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "header",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bytes",
+        "name": "payload",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bytes",
+        "name": "signature",
+        "type": "bytes"
+      }
+    ],
+    "name": "verifyAndAttest",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "quoteAddress",
+        "type": "address"
+      }
+    ],
+    "name": "getRegisteredQuote",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "bytes32",
+            "name": "digest",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "string",
+            "name": "hwmodel",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "swname",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "imageDigest",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "exp",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "iat",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Types.QuoteInfo",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "hwmodel",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "swname",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "imageDigest",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "iss",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "secboot",
+        "type": "bool"
+      }
+    ],
+    "name": "setBaseQuoteConfig",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

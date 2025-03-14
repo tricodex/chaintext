@@ -1,0 +1,43 @@
+{
+  "query_id": "0ff8bf0ab04ec01548c20252a5d8a893",
+  "query": "What is the current status of the Flare network?",
+  "answer": "The Flare network is currently operating normally with average block times of 1.0 seconds. Gas prices are stable at around 25 gwei, and network utilization is at 35% of capacity. Additionally, a planned network upgrade to improve FTSO data distribution is scheduled for next month, which aims to reduce response latency and improve the accuracy of price feeds.",
+  "confidence": 0.75,
+  "reasoning": "The answer is primarily based on the 'blockchain_state' context which has a high trust score. The information about the upcoming network upgrade is included from the 'twitter_official' context, which has a medium trust score. The information from the low trust source was not included, as it primarily describes Flare rather than providing its current status.",
+  "sources": [
+    {
+      "text": "The Flare network is currently operating normally with average block times of 1.0 seconds. Gas prices are stable at around 25 gwei, and network utilization is at 35% of capacity.",
+      "source": "blockchain_state",
+      "source_type": "Blockchain State",
+      "trust_score": 0.6289419207425468,
+      "url": "",
+      "timestamp": 1741963531
+    },
+    {
+      "text": "A planned network upgrade to improve FTSO data distribution is scheduled for next month. This upgrade will reduce response latency and improve the accuracy of price feeds.",
+      "source": "twitter_official",
+      "source_type": "Official Twitter",
+      "trust_score": 0.4209428406300819,
+      "url": "https://twitter.com/FlareNetworks/status/1234567890",
+      "timestamp": 1741531651
+    },
+    {
+      "text": "Flare is a blockchain specifically designed to support data intensive use cases, including Machine Learning/AI, RWA tokenization, gaming and social. With decentralized oracles enshrined in the network...",
+      "source": "flare_docs",
+      "source_type": "Flare Documentation",
+      "trust_score": 0.2839198456226585,
+      "url": "https://docs.flare.network/tech/flare/",
+      "timestamp": 1739371651
+    }
+  ],
+  "attestation": {
+    "quote": "UVVPVEUtOWI2MGEzNGU3NGI4ZjY0N2ZjMGIwNTdmNDQwNmY4YTktNjY4OGMxOTE5OTZhNjFkMDVjMDJjNTU4OGI0MjNkNDA1YmJjMjEzYjVkOTRmZDU3MTM0NjIwNjc1YmEwNzI1NS0xNzQxOTYzNjUyLjY4NTk2MDM=",
+    "data_hash": "4f058373370f5d18e8550a24cf2b61cb35db76aed35ed5777fd041dd2de9ce4c",
+    "signature": "U0lHLTRmMDU4MzczMzcwZjVkMThlODU1MGEyNGNmMmI2MWNiMzVkYjc2YWVkMzVlZDU3NzdmZDA0MWRkMmRlOWNlNGMtMTc0MTk2MzY1Mi42ODU5Njg5",
+    "timestamp": 1741963652,
+    "nonce": "9b60a34e74b8f647fc0b057f4406f8a9",
+    "simulated": false,
+    "type": "tpm"
+  },
+  "processing_time": 1.5140457153320312
+}
