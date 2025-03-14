@@ -33,7 +33,7 @@ class Settings(BaseSettings):
     )
     TEE_VERIFIER_ADDRESS: str = os.getenv(
         "TEE_VERIFIER_ADDRESS", 
-        "0x93012953008ef9AbcB71F48C340166E8f384e985"  # Use correct address
+        "0x28432EC82268eE4A9fa051e9005DCea26ae21160"  # Use correct address
     )
     
     # Flare vTPM Attestation

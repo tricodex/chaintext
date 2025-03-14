@@ -1,0 +1,71 @@
+[
+  {
+    "inputs": [],
+    "name": "tokenType",
+    "outputs": [
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "header",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bytes",
+        "name": "payload",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bytes",
+        "name": "signature",
+        "type": "bytes"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "alg",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "kid",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "typ",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct Header",
+        "name": "parsedHeader",
+        "type": "tuple"
+      }
+    ],
+    "name": "verifySignature",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "verified",
+        "type": "bool"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "digest",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  }
+] 
