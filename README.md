@@ -263,3 +263,4 @@ Building this system was challenging but rewarding. The most valuable lesson was
 The integration with Flare's vTPM attestation contracts shows how on-chain verification can enhance the trustworthiness of off-chain systems, creating a bridge between traditional cloud infrastructure and blockchain technology. 
 
 
+  https://github.com/tricodex/deployed-flare
